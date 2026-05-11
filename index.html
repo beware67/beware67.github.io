@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background: radial-gradient(ellipse at top, #2a1000 0%, #0d0600 100%);
@@ -236,11 +236,10 @@
 
   .wc-nav { position: fixed; top: 12px; left: 12px; display: flex; gap: 8px; z-index: 1000; }
   .wc-nav a { background: rgba(0,0,0,0.65); color: white; text-decoration: none; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-family: Arial, sans-serif; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.15); }
-  .wc-nav a:hover { background: rgba(0,0,0,0.9); }
+  .wc-nav a:hover { background: rgba(0,0,67,0.9); }
 </style>
 </head>
 <body>
-
 <nav class="wc-nav">
   <a href="/">&#127968; Home</a>
   <a href="/web-craft/">&#8592; Examples</a>
@@ -273,7 +272,7 @@
   <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
     <button class="shoot-btn" id="shoot-btn" onclick="shoot()">
       🏀
-      <span class="btn-label">SHOOT!</span>
+      <span class="btn-label">SHOOT! BANG U R DEAD</span>
     </button>
     <div class="cooldown-track">
       <div class="cooldown-fill" id="cd-fill"></div>
@@ -290,7 +289,7 @@
     <h2 id="result-title"></h2>
     <div class="result-msg"  id="result-msg"></div>
     <div class="final-score" id="result-score"></div>
-    <button class="restart-btn" onclick="restart()">🔄 Play Again</button>
+    <button class="restart-btn" onclick="restart()">If u wanna get cooked again</button>
   </div>
 </div>
 
@@ -412,7 +411,7 @@
     timerEl.classList.remove('urgent');
     cdFill.style.width  = '100%';
     cdLabel.textContent = 'Tap to start!';
-    msgEl.textContent   = '🏀 Press SHOOT to start the game!';
+    msgEl.textContent   = '🏀 Press SHOOT or else!';
     msgEl.classList.remove('flash');
     shootBtn.disabled   = false;
     overlay.classList.remove('show');
@@ -438,6 +437,7 @@
     void el.offsetWidth;
     el.classList.add('bounce');
   }
+  
 </script>
 
 </body>
